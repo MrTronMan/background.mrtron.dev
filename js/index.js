@@ -87,13 +87,13 @@ function backgroundchange() {
     var currentTime = new Date().getHours();
     const summarytag = document.getElementById("summary");
     if (document.body) {
-        if (7 <= currentTime && currentTime < 17) {
+        if (7 <= currentTime && currentTime < 20) {
             document.body.background = "img/day.png";
             summarytag.style.color = "rgb(238, 168, 253)";  
         }
         else {
             document.body.background = "img/night.jpg";
-            summarytag.style.color = "white";
+            summarytag.style.color = "rgb(16,48,97)";
         }
     }
 }
