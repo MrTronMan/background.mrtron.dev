@@ -1,0 +1,23 @@
+body {
+    background-image: url(../img/night.jpg);
+    background-size: cover;
+}
+.summary {
+    text-align: center;
+    position: relative;
+    top: 80px;
+    font-size: 70px;
+    color: white;
+}
+.summary #day {
+    font-family: 'Dancing Script', cursive;
+    transform: rotate(2deg);
+    font-size: 160px;
+    line-height: .9em;
+}
+.summary #time, #date{
+    font-family: 'RamsW01-Black';
+}
+.summary #time {
+    line-height: .5em;
+}
