@@ -7,7 +7,6 @@
     url("https://db.onlinewebfonts.com/t/ef37d5a2aade0e1cb69df8d3f5f2aa60.svg#RamsW01-Black") format("svg"); 
 }
 body {
-    background-image: url(../img/night.jpg);
     background-size: cover;
 }
 .summary {
@@ -15,7 +14,7 @@ body {
     position: relative;
     top: 80px;
     font-size: 70px;
-    color: white;
+    /*rgb(238, 168, 253);*/
 }
 .summary #day {
     font-family: 'Dancing Script', cursive;

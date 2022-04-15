@@ -50,7 +50,7 @@ function displayClock() {
    if (sec < 10) {
        sec = '0' + sec;
    }
-   var time = hrs + ':' + min;
+   var time = hrs + ':' + min + ':' + sec;
    time = time.split(':'); // convert to array
    // fetch
    var hours = Number(time[0]);
@@ -67,6 +67,7 @@ function displayClock() {
      timeValue= "12";
    }
    timeValue += (minutes < 10) ? ":0" + minutes : ":" + minutes;  // get minutes
+   //timeValue += (seconds < 10) ? ":0" + seconds : ":" + seconds;  // get seconds
    timeValue += (hours >= 12) ? " PM" : " AM";  // get AM/PM
    document.getElementById('time').innerHTML = timeValue;
 }
@@ -81,9 +82,25 @@ function date() {
     today = mm + '/' + dd + '/' + yyyy;
     document.getElementById('date').innerHTML = today;
 };
+//Background Change
+function backgroundchange() {
+    var currentTime = new Date().getHours();
+    const summarytag = document.getElementById("summary");
+    if (document.body) {
+        if (7 <= currentTime && currentTime < 17) {
+            document.body.background = "img/day.png";
+            summarytag.style.color = "rgb(238, 168, 253)";  
+        }
+        else {
+            document.body.background = "img/night.jpg";
+            summarytag.style.color = "white";
+        }
+    }
+}
 //Intervals
 setInterval(displayClock, 1000);
 setInterval(date, 1000);
 setInterval(weekday, 1000);
+setInterval(backgroundchange, 1000);
     
     
