@@ -1,4 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Dancing+Script&family=Roboto+Mono&display=swap');
+@font-face {font-family: "RamsW01-Black);";
+    src: url("http://db.onlinewebfonts.com/t/ef37d5a2aade0e1cb69df8d3f5f2aa60.eot"), /* IE9*/
+    url("http://db.onlinewebfonts.com/t/ef37d5a2aade0e1cb69df8d3f5f2aa60.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("http://db.onlinewebfonts.com/t/ef37d5a2aade0e1cb69df8d3f5f2aa60.woff2") format("woff2"), /* chrome firefox */
+    url("http://db.onlinewebfonts.com/t/ef37d5a2aade0e1cb69df8d3f5f2aa60.woff") format("woff"), /* chrome firefox */
+    url("http://db.onlinewebfonts.com/t/ef37d5a2aade0e1cb69df8d3f5f2aa60.ttf") format("truetype"), /* chrome firefox opera Safari, Android, iOS 4.2+*/
+    url("http://db.onlinewebfonts.com/t/ef37d5a2aade0e1cb69df8d3f5f2aa60.svg#RamsW01-Black);") format("svg"); /* iOS 4.1- */
+}
 body {
     background-image: url(../img/night.jpg);
     background-size: cover;
