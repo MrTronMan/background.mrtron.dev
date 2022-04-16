@@ -68,7 +68,7 @@ function displayClock() {
    }
    timeValue += (minutes < 10) ? ":0" + minutes : ":" + minutes;  // get minutes
    //timeValue += (seconds < 10) ? ":0" + seconds : ":" + seconds;  // get seconds
-   timeValue += (hours >= 12) ? " PM" : " AM";  // get AM/PM
+   timeValue += (hours > 12) ? " PM" : " AM";  // get AM/PM
    document.getElementById('time').innerHTML = timeValue;
 }
 
