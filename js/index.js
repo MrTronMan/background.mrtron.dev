@@ -86,14 +86,21 @@ function date() {
 function backgroundchange() {
     var currentTime = new Date().getHours();
     const summarytag = document.getElementById("summary");
+    const svgtag = document.getElementById("day");
     if (document.body) {
         if (7 <= currentTime && currentTime < 20) {
             document.body.background = "img/day.png";
-            summarytag.style.color = "rgb(238, 168, 253)";  
+            summarytag.style.color = "rgb(238, 168, 253)";
+            svgtag.classList.remove('nighttime');
+            svgtag.classList.add('daytime'); 
         }
         else {
             document.body.background = "img/night.jpg";
             summarytag.style.color = "rgb(16,48,97)";
+            svgtag.classList.remove('daytime');
+            svgtag.classList.add('nighttime'); 
+            
+            
         }
     }
 }
