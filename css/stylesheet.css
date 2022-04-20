@@ -9,6 +9,10 @@
 body {
     background-size: cover;
 }
+html {
+    overflow: hidden;
+}
+
 .summary {
     text-align: center;
     position: relative;
@@ -23,9 +27,147 @@ body {
     font-size: 160px;
     line-height: .9em;
 }
+svg {
+    overflow: visible;
+    fill: white;
+}
 .summary #time, #date{
     font-family: 'RamsW01-Black';
 }
 .summary #time {
     line-height: .5em;
 }
+.summary #date {
+    position: relative;
+    top: -20px
+}
+/*------------------------------*/
+/*Daytime Classes*/
+svg .daytime {
+    stroke: rgb(238, 168, 253);
+    stroke-width: 1;
+    fill: rgb(238, 168, 253);
+   
+    animation: dayAnimate 5s alternate;
+  }
+  .dayText {
+    animation: dayText 5s;
+  }
+  .daybkgrd {
+    animation: dayBackground 2s;
+  }
+   /*------------------------------*/
+  /*Nighttime Classes*/
+  svg .nighttime {
+    stroke: rgb(16,48,97);
+    stroke-width: 1;
+    fill: rgb(16,48,97);
+   
+    animation: nightAnimate 5s alternate;
+  }
+  .nightText {
+    animation: nightText 5s;
+  }
+  
+  .nightbkgrd {
+    animation: nightBackground 2s;
+  }
+  
+  .nightText {
+    animation: nightText 5s;
+  }
+  /*------------------------------*/
+  /*Daytime Animations*/
+  @keyframes dayAnimate {
+    0% {
+        stroke: rgb(16,48,97);
+        fill: rgb(16,48,97);
+      }
+    10% {
+      stroke-dasharray: 0 50%;
+      stroke-dashoffset:  20%;
+      fill:hsl(189, 68%, 75%, 0%);
+  
+    }
+    
+    50% {
+      fill:hsl(189, 68%, 75%, 0%)
+    }
+    
+    75% {
+      fill:hsl(189, 68%, 75%, 0%)
+    }
+    
+    100% {
+      stroke-dasharray: 50% 0;
+      stroke-dashoffstet: -20%;
+      fill: rgb(238, 168, 253);
+      stroke: rgb(238, 168, 253);
+    }
+    
+  }
+  @keyframes dayBackground {
+    0% {
+        background-image: url("../img/night.jpg");
+      }
+    100% {
+        background-image: url("../img/day.png");
+    }
+    
+  }
+  @keyframes dayText {
+    0% {
+        color:rgb(16,48,97);
+      }
+    100% {
+        color: rgb(238, 168, 253);
+    }
+    
+  }
+  /*------------------------------*/
+/*Nighttime Animations*/
+  @keyframes nightAnimate {
+    0% {
+        fill: rgb(238, 168, 253);
+      stroke: rgb(238, 168, 253);
+      }
+    10% {
+      stroke-dasharray: 0 50%;
+      stroke-dashoffset:  20%;
+      fill:hsl(189, 68%, 75%, 0%)
+  
+    }
+    
+    50% {
+      fill:hsl(189, 68%, 75%, 0%)
+    }
+    
+    75% {
+      fill:hsl(189, 68%, 75%, 0%)
+    }
+    
+    100% {
+      stroke-dasharray: 50% 0;
+      stroke-dashoffstet: -20%;
+      fill: rgb(16,48,97);
+    }
+    
+  }
+  @keyframes nightBackground {
+    0% {
+        background-image: url("../img/day.png");
+      }
+    100% {
+        background-image: url("../img/night.jpg");
+    }
+    
+  }
+  @keyframes nightText {
+    0% {
+        color:rgb(238, 168, 253);
+      }
+    100% {
+        color: rgb(16,48,97); 
+    }
+    
+  }

@@ -1,3 +1,10 @@
+//IDs
+const summaryTag = document.getElementById("summary");
+const dayTag = document.getElementById("day");
+const timeTag = document.getElementById("time");
+const dateTag = document.getElementById("date");
+const svgTag = document.getElementById("svgweekday");
+
 //days of the week (this hurt to do.)
 function weekday() {
     let date = new Date();
@@ -26,7 +33,7 @@ function weekday() {
             nameOfDay = 'Saturday';
             break;
     };
-    document.getElementById('day').innerHTML = `${nameOfDay}`;
+    dayTag.innerHTML = `${nameOfDay}`;
 };
 
 //Displays Clock (converts to american instead of military so I can read)
@@ -69,7 +76,7 @@ function displayClock() {
    timeValue += (minutes < 10) ? ":0" + minutes : ":" + minutes;  // get minutes
    //timeValue += (seconds < 10) ? ":0" + seconds : ":" + seconds;  // get seconds
    timeValue += (hours > 12) ? " PM" : " AM";  // get AM/PM
-   document.getElementById('time').innerHTML = timeValue;
+   timeTag.innerHTML = timeValue;
 }
 
 //Gets Date in MM/DD/YYYY format
@@ -83,17 +90,42 @@ function date() {
     document.getElementById('date').innerHTML = today;
 };
 //Background Change
+//If it is 7 (7AM) then thats the IF, if it is 20 (8PM) then that is the else.
 function backgroundchange() {
     var currentTime = new Date().getHours();
-    const summarytag = document.getElementById("summary");
     if (document.body) {
         if (7 <= currentTime && currentTime < 20) {
+            //Setting image and color to daytime.
             document.body.background = "img/day.png";
-            summarytag.style.color = "rgb(238, 168, 253)";  
+            summaryTag.style.color = "rgb(238, 168, 253)";
+            //Removing all nighttime classes to que animation.
+            dayTag.classList.remove('nighttime'); 
+            dateTag.classList.remove('nightText');
+            timeTag.classList.remove('nightText');
+            document.body.classList.remove('nightbkgrd');
+            //Adding all daytime classes to start animation.
+            document.body.classList.add('daybkgrd');
+            dayTag.classList.add('daytime'); 
+            dateTag.classList.add('dayText');
+            timeTag.classList.add('dayText');
         }
         else {
+            //Setting image and color to nighttime.
             document.body.background = "img/night.jpg";
-            summarytag.style.color = "rgb(16,48,97)";
+            summaryTag.style.color = "rgb(16,48,97)";
+            //Removing all daytime classes to que animation.
+            dayTag.classList.remove('daytime');
+            dateTag.classList.remove('dayText');
+            timeTag.classList.remove('dayText');
+            document.body.classList.remove('daybkgrd');
+            //Adding all nighttime classes to start animation.
+            document.body.classList.add('nightbkgrd');
+            dayTag.classList.add('nighttime'); 
+            dateTag.classList.add('nightText');
+            timeTag.classList.add('nightText');
+            
+            
+            
         }
     }
 }
