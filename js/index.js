@@ -94,7 +94,7 @@ function date() {
 function backgroundchange() {
     var currentTime = new Date().getHours();
     if (document.body) {
-        if (7 <= currentTime && currentTime < 22) {
+        if (7 <= currentTime && currentTime < 20) {
             //Setting image and color to daytime.
             document.body.background = "img/day.png";
             summaryTag.style.color = "rgb(238, 168, 253)";
