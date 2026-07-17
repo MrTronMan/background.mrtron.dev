@@ -1,53 +1,72 @@
 @font-face {
-    font-family: 'Fiorello Condensed';
-    src: url('fonts/Fiorello CG Condensed Regular.otf') format('opentype');
+  font-family: 'Fiorello Condensed';
+  src: url('fonts/Fiorello CG Condensed Regular.otf') format('opentype');
 }
 
 @font-face {
-    font-family: 'Helvetica Neue';
-    src: url('fonts/HelveticaNeue-Roman.otf') format('opentype');
-    font-weight: normal;
+  font-family: 'Helvetica Neue';
+  src: url('fonts/HelveticaNeue-Roman.otf') format('opentype');
+  font-weight: normal;
 }
 
 @font-face {
-    font-family: 'Helvetica Neue';
-    src: url('fonts/HelveticaNeue-Bold.otf') format('opentype');
-    font-weight: bold;
+  font-family: 'Helvetica Neue';
+  src: url('fonts/HelveticaNeue-Bold.otf') format('opentype');
+  font-weight: bold;
 }
 body {
-    background-size: cover;
-    background-position-y: -360px;
+  background-size: cover;
+  background-position-y: -360px;
+}
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(img/grain.gif);
+  opacity: 0.1;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: 9999;
 }
 html {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .summary {
-    position: absolute;
+  position: absolute;
     top: 72%;
     left: 84%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: #333232;
+    color: #101010;
+    mix-blend-mode: luminosity;
+    text-shadow: -12px 0px 150px rgb(255 255 255 / 69%);
 }
 .summary #time {
-    font-family: 'Fiorello Condensed', sans-serif;
-    font-size: 120px;
-    line-height: 1em;
-    margin: 0;
-    padding: 0;
+  font-family: 'Fiorello Condensed', sans-serif;
+  font-size: 140px;
+  line-height: 1.1;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  display: block;
+  color: #000000;
 }
 .summary #day {
-    font-family: 'Fiorello Condensed', sans-serif;
-    font-size: 80px;
-    line-height: 1em;
-    margin: 10px 0;
-    font-weight: bold;
+  font-family: 'Fiorello Condensed', sans-serif;
+  font-size: 150px;
+  line-height: 1em;
+  margin: 10px 0;
+  font-weight: bold;
+  color: #0c0c0d;
 }
 .summary #date {
-    font-family: 'Fiorello Condensed', sans-serif;
-    font-size: 40px;
-    line-height: 1em;
-    margin: 10px 0;
+  font-family: 'Fiorello Condensed', sans-serif;
+  font-size: 100px;
+  line-height: 1em;
+  margin: 10px 0;
 }
 
