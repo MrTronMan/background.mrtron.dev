@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'Fiorello Condensed';
+    src: url('fonts/Fiorello CG Condensed Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('fonts/HelveticaNeue-Roman.otf') format('opentype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('fonts/HelveticaNeue-Bold.otf') format('opentype');
+    font-weight: bold;
+}
+body {
+    background-size: cover;
+    background-position-y: -360px;
+}
+html {
+    overflow: hidden;
+}
+
+.summary {
+    position: absolute;
+    top: 72%;
+    left: 84%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #333232;
+}
+.summary #time {
+    font-family: 'Fiorello Condensed', sans-serif;
+    font-size: 120px;
+    line-height: 1em;
+    margin: 0;
+    padding: 0;
+}
+.summary #day {
+    font-family: 'Fiorello Condensed', sans-serif;
+    font-size: 80px;
+    line-height: 1em;
+    margin: 10px 0;
+    font-weight: bold;
+}
+.summary #date {
+    font-family: 'Fiorello Condensed', sans-serif;
+    font-size: 40px;
+    line-height: 1em;
+    margin: 10px 0;
+}
+
