@@ -16,7 +16,8 @@
 }
 body {
   background-size: cover;
-  background-position-y: -360px;
+  background-position: center bottom;
+  background-attachment: fixed;
 }
 body::before {
   content: '';
